@@ -7,6 +7,7 @@ let message = ""
 
 messageEl = document.querySelector("#message-el")
 sumEl = document.querySelector("#sum-el")
+cardsEl = document.querySelector("#cards-el")
 
 function startGame() {
     if (sum <= 20) {
@@ -20,6 +21,7 @@ function startGame() {
         message = "You're out of the game! 😭"
         isAlive = false
     }
+    cardsEl.textContent = "Cards: "+ firstCard + " " + secondCard
     sumEl.textContent="Sum: "+sum 
     messageEl.textContent = message
       
