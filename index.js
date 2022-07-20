@@ -6,15 +6,24 @@ let hasBlackJack = false
 let isAlive = true
 let message = ""
 
-messageEl = document.querySelector("#message-el")
-sumEl = document.querySelector("#sum-el")
-cardsEl = document.querySelector("#cards-el")
+let messageEl = document.querySelector("#message-el")
+let sumEl = document.querySelector("#sum-el")
+let cardsEl = document.querySelector("#cards-el")
 
 function startGame() {
     renderGame()
 }
 
 function renderGame() {
+
+    cardsEl.textContent = "Cards: "
+
+    for(let i = 0; i < cards.length; i++) {
+        cardsEl.textContent+=cards[i]+" "
+    }
+
+    sumEl.textContent="Sum: "+sum
+
     if (sum <= 20) {
         message = "Do you want to draw a new card? 🙂"
     } 
@@ -26,18 +35,15 @@ function renderGame() {
         message = "You're out of the game! 😭"
         isAlive = false
     }
-    cardsEl.textContent = "Cards: "+ cards[0] + " " + cards[1]
-    sumEl.textContent="Sum: "+sum 
     messageEl.textContent = message
       
 }
 
 function newCard(){
-    console.log("New Card")
-
+    
     let card=3
     sum+=card
-
+    cards.push(card)
     renderGame()
 
 }
