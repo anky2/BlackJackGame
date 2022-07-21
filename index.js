@@ -3,7 +3,7 @@ let secondCard = getRandomCard()
 let cards=[firstCard, secondCard]
 let sum = firstCard + secondCard
 let hasBlackJack = false
-let isAlive = false
+let isGameAlive = false
 let message = ""
 
 let player ={
@@ -32,7 +32,7 @@ function getRandomCard() {
 
 
 function startGame() {
-    isAlive = true
+    isGameAlive = true
     renderGame()
 }
 
@@ -55,7 +55,7 @@ function renderGame() {
     } 
     else {
         message = "You're out of the game! 😭"
-        isAlive = false
+        isGameAlive = false
     }
     messageEl.textContent = message
       
@@ -63,7 +63,7 @@ function renderGame() {
 
 function newCard(){
 
-    if(isAlive===true && hasBlackJack===false){
+    if(isGameAlive===true && hasBlackJack===false){
         let card= getRandomCard()
         sum+=card
         cards.push(card)
