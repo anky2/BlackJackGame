@@ -1,6 +1,6 @@
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-image: url("./images/background1.jpg");
+    background-image: url("./images/table.png");
     background-size: cover;
     text-align: center;
     color: white;
@@ -19,11 +19,13 @@ h1 {
 
 button {
     color:white;
-    width: 150px;
-    background: red;
+    width: 300px;
+    background: rgb(60, 203, 21);
     padding: 10px 30px;
     font-weight: bold;
+    font-size: 0.5em;
     border: none;
-    border-radius: 2px;
+    border-radius: 8px;
     text-align: center;
+    height: 50px;
 }
